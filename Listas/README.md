@@ -1,6 +1,6 @@
 # Formato
 
-## Exercícios práticos
+## Exercícios Práticos
     numeroDaLista_exercicio.py
 Ex:
 
