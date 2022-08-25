@@ -1,7 +1,7 @@
 from tkinter import N
 
 
-n = int(input())    # Recebe a quantidade de minutos
+n = int(input("Digite a quantidade de minutos: "))    # Recebe a quantidade de minutos
 horas = n // 60     # Divisão inteira de minutos por 60
 minutos = n % 60    # Resto da divisão inteira
 
