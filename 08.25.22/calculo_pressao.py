@@ -1,5 +1,5 @@
-forca = float(input("DIgite a força (em N):"))  # Recebe o número racional da força
-raio = float(input("Digite a força (em m)"))   # Recebe o número racional do raio
+forca = float(input("DIgite a força (em N): "))  # Recebe o número racional da força
+raio = float(input("Digite a força (em m): "))   # Recebe o número racional do raio
 
 pi = 3.14159265 # Pi constante, é possível colocar uma biblioteca matemática
 
