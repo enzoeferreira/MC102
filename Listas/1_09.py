@@ -25,4 +25,4 @@ elif sexo == 'F':
     else:
         print("\nNao aposentavel")
 else:
-    print("\nSexo nao encontrado")
+    print("\n'Sexo nao encontrado")
