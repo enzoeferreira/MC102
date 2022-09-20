@@ -2,8 +2,7 @@ quantidade = int(input("Quantas temperaturas serão lidas? "))
 temperaturas = []
 
 for _ in range(quantidade):
-    temp = float(input())
-    temperaturas.append(temp)
+    temperaturas.append(float(input("Digite uma temperatura: ")))
 
 print(temperaturas)
 
