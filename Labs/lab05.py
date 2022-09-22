@@ -13,39 +13,31 @@ D = int(input())
 
 # Leitora e processamento dos periodos de trabalho de cada dia
 
-horasTrabDiaria = []
-horasExtrasDiarias = 0
-for i in range(D):
-    horasTrab = 0
-    periodo = int(input())
+horasDiarias = []
+horasExtras = []
+for dia in range(D):
+    horasTrabalhadas = 0
     
-    j = 0
-    while j < periodo:
+    periodos = int(input())
+    for periodo in range(periodos):
         start = int(input())
         stop = int(input())
         
-        horasTrab += (stop - start)
-        
-        j += 1
-    if horasTrab > 8:
-        horasExtrasDiarias += horasTrab - 8
-        print(f"horas extras = {horasExtrasDiarias}")
-    horasTrabDiaria.append(horasTrab)
+        horasTrabalhadas += stop - start
+    horasDiarias.append(horasTrabalhadas)
+    horasExtras.append(horasTrabalhadas - 8) if horasTrabalhadas > 8 else horasExtras.append(0)
 
 # Calculo do valor devido ao funcionário
 
-horasExtras = 0
+cargaHoraria = sum(horasDiarias)
+cargaExtra = sum(horasExtras)
 
-valor = (V * sum(horasTrabDiaria))
-if sum(horasTrabDiaria) > 44:
-    horasExtras += sum(horasTrabDiaria) - 44
-    print(horasExtras)
-    horasExtras += horasExtrasDiarias
-    print(horasExtras)
-if horasExtras > 0:
-    valor += ((V/2) * horasExtras)
+if cargaHoraria - cargaExtra > 44:
+    cargaExtra += (cargaHoraria - cargaExtra) - 44
+
+valor = (V * cargaHoraria) + ((V/2) * cargaExtra)
 
 # Impressão da saída
-print("Horas trabalhadas:", sum(horasTrabDiaria))
-print("Horas extras:", horasExtras)
+print("Horas trabalhadas:", cargaHoraria)
+print("Horas extras:", cargaExtra)
 print("Valor devido: R$ {:0.2f}".format(valor))
