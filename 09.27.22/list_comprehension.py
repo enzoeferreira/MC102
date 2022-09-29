@@ -52,6 +52,15 @@ print(valoresNegativos)
 
 # --------------------------------------
 
+valores = [6, -1, 8, 0, -5, 6, 2, -2, -3]
+
+sinais = ["Positivo" if n >= 0 else "Negativo" for n in valores]
+
+print(valores)
+print(sinais)
+
+# --------------------------------------
+
 precos = [1000.0, 550.0, 635.0]
 descontos = [0.3, 0.15, 0.2]
 
