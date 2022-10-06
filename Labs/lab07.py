@@ -25,8 +25,8 @@ for i in range(tropas):
 
 # Processamento da guerra
             
-print(tropasDef)
-print(tropasAtk)
+# print(tropasDef)
+# print(tropasAtk)
 j = 0
 vencedores = False
 
@@ -34,38 +34,35 @@ while vencedores == False and j <= len(tropasDef) - len(tropasAtk):
     derrota = 0
     empate = 0
     vitoria = 0
-    print(f"------ Batalha {j + 1} ------")
-    print("i =", i)
-    print("j =", j)
+    # print(f"------ Batalha {j + 1} ------")
+    # print("i =", i)
+    # print("j =", j)
     for i in range(len(tropasAtk)):
-        print(f"Defensor {tropasDef[j + i]} vs Atacante {tropasAtk[i]}")
+        # print(f"Defensor {tropasDef[j + i]} vs Atacante {tropasAtk[i]}")
         if tropasDef[j + i] > tropasAtk[i]:
             derrota += 1
-            print("Perdemos...")
+            # print("Perdemos...")
         elif tropasDef[j + i] == tropasAtk[i]:
             empate += 1
-            print("Empatamos.")
+            # print("Empatamos.")
         else:
             vitoria += 1
-            print("Vencemos!")
+            # print("Vencemos!")
             
-    print("No total obtivemos:")
-    print("Derrotas =", derrota)
-    print("Empates =", empate)
-    print("Vitorias =", vitoria)
+    # print("No total obtivemos:")
+    # print("Derrotas =", derrota)
+    # print("Empates =", empate)
+    # print("Vitorias =", vitoria)
     if derrota >= vitoria:
         j += 1
-        print("Perdemos a guerra...")
+        # print("Perdemos a guerra...")
     else:
         vencedores = True
-        print("Vencemos a guerra!")
+        # print("Vencemos a guerra!")
 
     
 
 # Saída de dados
 
-print("-----------------------------")
-if vencedores == False:
-    print('Derrota')
-else:
-    print('Vitória posicionando as tropas a partir da posição', j + 1)
+# print("-----------------------------")
+print("Derrota") if vencedores == False else print('Vitória posicionando as tropas a partir da posição', j + 1)
