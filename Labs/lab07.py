@@ -58,9 +58,7 @@ while vencedores == False and j <= len(tropasDef) - len(tropasAtk):
         # print("Perdemos a guerra...")
     else:
         vencedores = True
-        # print("Vencemos a guerra!")
-
-    
+        # print("Vencemos a guerra!")    
 
 # Saída de dados
 
