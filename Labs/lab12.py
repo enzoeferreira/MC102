@@ -10,9 +10,7 @@ def imprimir_imagem(imagem):
     print(len(imagem[0]), len(imagem))
     print("255")
     for i in range(len(imagem)):
-        for j in range(len(imagem[0])):
-            print(f"{imagem[i][j]} ", end = "")
-        print()
+        print(" ".join(str(int(x)) for x in imagem[i]))
 
 def matrizNoneExpansao(matriz:list):
     matrizNone = []
